@@ -570,7 +570,7 @@ class GenericMetadata():
             return result
     
         #  How many seasons?
-        num_seasons = len(tvdb_show_obj)
+        #num_seasons = len(tvdb_show_obj)
     
         # if we have no season banners then just finish
         if 'season' not in tvdb_show_obj['_banners'] or 'season' not in tvdb_show_obj['_banners']['season']:
@@ -582,7 +582,8 @@ class GenericMetadata():
         # Returns a nested dictionary of season art with the season
         # number as primary key. It's really overkill but gives the option
         # to present to user via ui to pick down the road.
-        for cur_season in range(num_seasons):
+        #for cur_season in range(num_seasons):
+        for cur_season in tvdb_show_obj:
 
             result[cur_season] = {}
             
